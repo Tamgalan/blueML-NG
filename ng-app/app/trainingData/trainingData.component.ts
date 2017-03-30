@@ -9,7 +9,8 @@ const DATASETS: Dataset[] = [
     {id: 0, name:'UMICH', description: '273 users' },
     {id: 1, name:'BERKELEY', description: '100 patients'},
     {id: 2, name:'UCI', description: '1000 patients'},
-    {id: 3, name:'STANDFOR', description: '2000 million patients'}
+    {id: 3, name:'STANDFOR', description: '2000 million patients'},
+    {id: 4, name:'UCLA', description: '10 million patients'}
 ];
 
 
@@ -23,9 +24,8 @@ const DATASETS: Dataset[] = [
 export class trainingDataComponent implements OnInit, OnDestroy {
     title = 'Please select a training data set';
     datasets = DATASETS;
-
-
     selectedDataset: Dataset;
+
     onSelect(dataset: Dataset): void {
         this.selectedDataset = dataset;
     }
