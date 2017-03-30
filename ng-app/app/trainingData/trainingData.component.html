@@ -16,13 +16,27 @@
 
 
                 <div *ngIf="selectedDataset">
-                    <h2>{{selectedDataset.name}} dataset!</h2>
-                    <h3>{{selectedDataset.description}} dataset!</h3>
-                    <div><label>id: </label>{{selectedDataset.id}}</div>
-                    <div>
-                        <label>name: </label>
-                        <input [(ngModel)]="selectedDataset.name" placeholder="name"/>
+                    <h4>{{selectedDataset.name}} dataset!</h4>
+                    <!--<h3>{{selectedDataset.description}} dataset!</h3>-->
+                    <!--<div><label>id: </label>{{selectedDataset.id}}</div>-->
+                    <!--<div class="form-group">-->
+                        <!--<label>Name</label>-->
+                        <!--<input type="text" class="form-control" name="name" [(ngModel)]="user.name">-->
+                    <!--</div>-->
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <div class="radio" *ngFor="let gender of genders">
+                            <label>
+                                <input type="radio" name="gender" [(ngModel)]="user.gender" [value]="gender.value">
+                                {{gender.display}}
+                            </label>
+                        </div>
                     </div>
+                    <div class="form-group">
+                        <label>Age</label>
+                        <input type="number" class="form-control" name="age" [(ngModel)]="user.age">
+                    </div>
+
                 </div>
 
             <div class="form-group text-center">
