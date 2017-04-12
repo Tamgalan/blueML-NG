@@ -2,6 +2,14 @@ import { Component,  OnInit, Input }   from '@angular/core';
 
 import { FormDataService }            from '../data/formData.service';
 
+import { ChartsModule } from 'ng2-charts/ng2-charts';
+
+// imports: [
+//
+//     ChartsModule
+//
+// ]
+
 
 @Component ({
     selector:     'mt-wizard-result'
