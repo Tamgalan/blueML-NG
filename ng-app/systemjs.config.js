@@ -30,6 +30,7 @@
       'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
       'ui-router-ng2': 'npm:ui-router-ng2/_bundles/ui-router-ng2.js',
         'ng2-file-upload' : 'npm:ng2-file-upload'
+
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
