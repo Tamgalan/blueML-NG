@@ -46,7 +46,7 @@ export class trainingDataComponent implements OnInit, OnDestroy {
         { value: 'untoggled', display: 'UnToggled' },
     ];
 
-
+    /*
     selectedDataset:  Dataset[0];
     selectedDataset2: Dataset[1];
     selectedDataset3: Dataset[2];
@@ -80,6 +80,7 @@ export class trainingDataComponent implements OnInit, OnDestroy {
         console.log("checked",DATASETS[3].name)
 
     }
+    */
 
 
 

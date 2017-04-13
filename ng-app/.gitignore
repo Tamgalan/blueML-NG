@@ -3,4 +3,6 @@ app/**/*.map
 node_modules
 ../.idea/*
 ./idea/*
+*.xml
+*.log
 
