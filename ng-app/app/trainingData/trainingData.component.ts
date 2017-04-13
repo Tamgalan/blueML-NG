@@ -9,10 +9,10 @@ import { Selected } from './Select';
 import { User } from './user.interface';
 
 const DATASETS: Dataset[] = [
-    {id: 0, name:'MICHIGAN', description: '273 users', selected: false, pushed: false },
-    {id: 1, name:'BERKELEY', description: '100 patients',selected: false, pushed: false},
-    {id: 2, name:'UCI', description: '1000 patients',selected: false, pushed: false},
-    {id: 3, name:'STANDFORD', description: '2000 million patients',selected: false, pushed: false}
+    {id: 0, name:'MICHIGAN', description: '273 users', selected: false },
+    {id: 1, name:'BERKELEY', description: '100 patients',selected: false},
+    {id: 2, name:'UCI', description: '1000 patients',selected: false},
+    {id: 3, name:'STANDFORD', description: '2000 million patients',selected: false}
 ];
 
 
@@ -71,32 +71,14 @@ export class trainingDataComponent implements OnInit, OnDestroy {
 
     addSelect(newSelect:number){
         if(newSelect == 0){//special because the value is 0;
-            // if(this.listSelected.find(Selected=>Selected.id === newSelect)) {
-            //     this.listSelected.push(new Selected(newSelect))
-            //     this.datasets[newSelect].selected = true;
-            // }
-            if(!this.datasets[newSelect].selected) {
-                console.log("the michigan is already there")
-                if(!this.datasets[newSelect].pushed){
-                    this.listSelected.push(new Selected(newSelect))
-                    this.datasets[newSelect].pushed = true;
-                }
-                this.datasets[newSelect].selected = true;
-            }else{
-                this.datasets[newSelect].selected = false;
+            console.log("the michigan is already there")
+            if(this.listSelected.find(Selected=>Selected.id === newSelect)) {
+                this.listSelected.push(new Selected(newSelect))
             }
         }
         if(newSelect){
-            if(!this.datasets[newSelect].selected) {
-                console.log("checked", newSelect)
-                if(!this.datasets[newSelect].pushed){
-                    this.listSelected.push(new Selected(newSelect))
-                    this.datasets[newSelect].pushed = true;
-                }
-                this.datasets[newSelect].selected = true;
-            }else{
-                this.datasets[newSelect].selected = false;
-            }
+            this.listSelected.push(new Selected(newSelect))
+            console.log("checked", newSelect)
         }
         // console.info("list of selected ids:", listSelected)
     }

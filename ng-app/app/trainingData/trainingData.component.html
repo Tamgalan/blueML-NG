@@ -93,19 +93,17 @@
                 <div>
                     <div id= "id0" class="form-group">
                         <div *ngFor="let list of listSelected">
-                            <div [hidden] = "!datasets[list.id].selected" >
-                                <label>{{datasets[list.id].name}} dataset!</label>
-                                <br>
-                                <label>Gender</label>
-                                <div class="radio" *ngFor="let gender of genders">
-                                    <label>
-                                        <input type="radio" name="gender" [(ngModel)]="user.gender" [value]="gender.value">
-                                        {{gender.display}}
-                                    </label>
-                                </div>
-                                <label>Age</label>
-                                <input type="number" class="form-control" name="age" [(ngModel)]="user.age">
+                            <label>{{datasets[list.id].name}} dataset!</label>
+                            <br>
+                            <label>Gender</label>
+                            <div class="radio" *ngFor="let gender of genders">
+                                <label>
+                                    <input type="radio" name="gender" [(ngModel)]="user.gender" [value]="gender.value">
+                                    {{gender.display}}
+                                </label>
                             </div>
+                            <label>Age</label>
+                            <input type="number" class="form-control" name="age" [(ngModel)]="user.age">
                         </div>
                     </div>
                 </div>

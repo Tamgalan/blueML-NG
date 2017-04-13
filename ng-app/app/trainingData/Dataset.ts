@@ -4,5 +4,4 @@ export class Dataset {
     name: string;
     description: string;
     selected: boolean;
-    pushed: boolean;
 }
