@@ -102,6 +102,8 @@ export class trainingDataComponent implements OnInit, OnDestroy {
 
 
 
+
+
     @Input() formData;
     
     constructor(private formDataService: FormDataService) {

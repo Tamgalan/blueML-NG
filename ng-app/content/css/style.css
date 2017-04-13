@@ -7,6 +7,15 @@
     list-style: none;
 }
 
+#training_data{
+    column-count: 2;
+    list-style: none;
+}
+
+#training_data_meta{
+    column-count: 2;
+    list-style: none;
+}
 
 .tab-content .choice {
   text-align: center;
