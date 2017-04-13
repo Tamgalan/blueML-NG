@@ -20,6 +20,7 @@ export class analysisComponent implements OnInit, OnDestroy {
     available_features = ['Q-R-S Interval (msec)', 'P-R Interval (msec)', 't-Q-T Interval (msec)', 'T Interval (msec)', 'P Interval (msec)', 'Heart Rate (bpm)'];
     available_algorithms = ['Support Vector Machines', 'K-Nearest Neighbor', 'Linear Discriminant Analysis', 'Naïve Bayes'];
     selected_features = [];
+    selected_advanced_options = false;
 
     constructor(private formDataService: FormDataService) {
     }
@@ -48,15 +49,20 @@ export class analysisComponent implements OnInit, OnDestroy {
             this.formData.features.push(feature);
          }
          else {
+            this.formData.features.splice( indexOfFeature, 1);
             console.log("Already been added")
         }
+    }
+
+    selectAdvance(){
+        this.selected_advanced_options = true;
     }
 
 
 
 
 
-    
+
 
     changeAlgo(value: number) {
 
