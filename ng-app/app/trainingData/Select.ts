@@ -3,5 +3,5 @@
  */
 
 export class Selected{
-    id: number[];
+    constructor(public id: number){}
 }

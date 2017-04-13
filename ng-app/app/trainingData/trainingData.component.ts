@@ -52,11 +52,8 @@ export class trainingDataComponent implements OnInit, OnDestroy {
 
     public selected: Selected;
 
-    public id = [
-        {id: 0, name: 'Michigan', selected: false},
-        {id: 1, name: 'Berkeley', selected: false},
-        {id: 2, name: 'UCI', selected: false},
-        {id: 3, name: 'MIT', selected: false}
+    public listSelected = [
+
     ];
 
 
@@ -69,11 +66,21 @@ export class trainingDataComponent implements OnInit, OnDestroy {
         DATASETS[0].selected = true;
         this.selectedDataset = DATASETS[0];
 
-        console.log("checked",DATASETS[0].name)
+        console.log("checked",)
     }
 
-    addSelect(): void{
-        this.[]
+    addSelect(newSelect:number){
+        if(newSelect == 0){//special because the value is 0;
+            console.log("the michigan is already there")
+            if(this.listSelected.find(Selected=>Selected.id === newSelect)) {
+                this.listSelected.push(new Selected(newSelect))
+            }
+        }
+        if(newSelect){
+            this.listSelected.push(new Selected(newSelect))
+            console.log("checked", newSelect)
+        }
+        // console.info("list of selected ids:", listSelected)
     }
 
     // onSelect1(): void {
