@@ -49,12 +49,14 @@
 
                 </div>
 
-            <div class="form-group">
-                Select Features for algorithm
-                    <div *ngFor="let feature of available_features">
+
+                <h2>Select Features for algorithm</h2>
+            <div class="form-group" id="feature_list">
+
+                    <li *ngFor="let feature of available_features">
 
                         <button class="btn btn-primary dropdown-toggle" type="button" id="feature" value = {{feature}}  (click) = "selectFeature(feature)"  > {{feature}} </button>
-                    </div>
+                    </li>
 
             </div>
 
