@@ -2,6 +2,12 @@
     border-color: #ccc;
 }
 
+#feature_list{
+    column-count: 4;
+    list-style: none;
+}
+
+
 .tab-content .choice {
   text-align: center;
   cursor: pointer;

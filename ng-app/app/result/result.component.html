@@ -12,45 +12,47 @@
             <div class="row">
                 <div class='col-xs-3 col-sm-2'>
                     <div class="form-group">
-                        <label class="control-label" for="name">Name: </label>
+                        <label class="control-label" for="name">Training Data: </label>
                     </div>
                 </div>
                 <div class='col-xs-9 col-sm-10'>
-                    {{formData.firstName + ' ' + formData.lastName}}
+                    {{formData.training_Data }}
                 </div>
             </div>
             <div class="row">
                 <div class='col-xs-3 col-sm-2'>
                     <div class="form-group">
-                        <label class="control-label" for="email">Email: </label>
+                        <label class="control-label" for="name">ECG File Data: </label>
                     </div>
                 </div>
                 <div class='col-xs-9 col-sm-10'>
-                    {{formData.email}}
+                    {{formData.user_ecg_data }}
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class='col-xs-3 col-sm-2'>
+                    <div class="form-group">
+                        <label class="control-label" for="email">Algorithm Selected: </label>
+                    </div>
+                </div>
+                <div class='col-xs-9 col-sm-10'>
+                    {{formData.algorithm}}
                 </div>
            </div>
             <div class="row">
                 <div class='col-xs-3 col-sm-2'>
                     <div class="form-group">
-                        <label class="control-label" for="work">Work: </label>
+                        <label class="control-label" for="work">Features Selected: </label>
                     </div>
                 </div>
                 <div class='col-xs-9 col-sm-10'>
-                    {{formData.work}}
+                    <div *ngFor="let feature of formData.features">
+                    {{feature}}
                 </div>
            </div>
-           <div class="row">
-                <div class='col-xs-3 col-sm-2'>
-                    <div class="form-group">
-                        <label class="control-label" for="address">Address: </label>
-                    </div>
-                </div>
-                <div class='col-xs-9 col-sm-10'>
-                    {{formData.street}}
-                    <br/>
-                    {{formData.city + ' ' + formData.state + ' ' + formData.zip}}
-                </div>
-            </div>
+
         </div>
         <!--<div>-->
             <!--<div style="display: block">-->

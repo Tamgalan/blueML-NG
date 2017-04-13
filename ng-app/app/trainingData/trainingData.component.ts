@@ -50,17 +50,17 @@ export class trainingDataComponent implements OnInit, OnDestroy {
         { value: 'untoggled', display: 'UnToggled' },
     ];
 
+
+
     public selected: Selected;
 
     public listSelected = [
+
 
     ];
 
 
     selectedDataset:  Dataset;
-    // selectedDataset2: Dataset[1];
-    // selectedDataset3: Dataset[2];
-    // selectedDataset4: Dataset[3];
 
     onSelect(): void {
         DATASETS[0].selected = true;
@@ -76,9 +76,9 @@ export class trainingDataComponent implements OnInit, OnDestroy {
             //     this.datasets[newSelect].selected = true;
             // }
             if(!this.datasets[newSelect].selected) {
-                console.log("the michigan is already there")
+                console.log("the michigan is already there");
                 if(!this.datasets[newSelect].pushed){
-                    this.listSelected.push(new Selected(newSelect))
+                    this.listSelected.push(new Selected(newSelect));
                     this.datasets[newSelect].pushed = true;
                 }
                 this.datasets[newSelect].selected = true;
@@ -88,9 +88,9 @@ export class trainingDataComponent implements OnInit, OnDestroy {
         }
         if(newSelect){
             if(!this.datasets[newSelect].selected) {
-                console.log("checked", newSelect)
+                console.log("checked", newSelect);
                 if(!this.datasets[newSelect].pushed){
-                    this.listSelected.push(new Selected(newSelect))
+                    this.listSelected.push(new Selected(newSelect));
                     this.datasets[newSelect].pushed = true;
                 }
                 this.datasets[newSelect].selected = true;
@@ -98,29 +98,7 @@ export class trainingDataComponent implements OnInit, OnDestroy {
                 this.datasets[newSelect].selected = false;
             }
         }
-        // console.info("list of selected ids:", listSelected)
     }
-
-    // onSelect1(): void {
-    //     DATASETS[1].selected = true;
-    //     this.selectedDataset2 = DATASETS[1];
-    //     console.log("checked",DATASETS[1].name)
-    //
-    // }
-    //
-    // onSelect2(): void {
-    //     DATASETS[2].selected = true;
-    //     this.selectedDataset2 = DATASETS[2];
-    //     console.log("checked",DATASETS[2].name)
-    //
-    // }
-    //
-    // onSelect3(): void {
-    //     DATASETS[3].selected = true;
-    //     this.selectedDataset2 = DATASETS[3];
-    //     console.log("checked",DATASETS[3].name)
-    //
-    // }
 
 
 
